@@ -58,6 +58,5 @@ cout << endl;
         cout << fixed << setprecision(4);
         cout << "Your total GPA is " << gpa << endl;
 
-    //
     return 0;
 }
