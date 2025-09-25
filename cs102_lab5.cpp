@@ -3,17 +3,17 @@
 using namespace std;
 int main() {
     //Problem1
-for (int i = 1; i <= 10; i++) { cout << i << " " ;}
+for (int i = 1; i <= 100; i *=3) { cout << i << " " ;}
 cout << endl;
 
     //Problem2
     int sum=0;
-    for (int i = 1; i <= 10; i++) { sum += i;}
+    for (int i = 1; i <= 100; i++) { sum += i;}
 
     cout << sum << endl;
     //Problem3
     for (int i = 1; i <= 100; i++) {
-        if (i%5==0) {
+        if (i%10==1) {
             continue;
         }
         cout << i << " " ;
@@ -24,21 +24,21 @@ cout << endl;
     int n;
     cout << "n=";
     cin >> n;
-    for (int i =1; i <= n; i++) {
+    for (int i =0; i <= n; i++) {
         if (i%10 !=0 ) {
             continue;
         }
         cout << i << " ";
     }
     cout << endl;
-    //Problem5
+  //Problem5
     for (char i = 'A'; i <= 'Z'; i++) {
         cout << i << ' ';
         if ((i-64)%5 == 0)
             cout << '\n';
     }
     cout << endl;
-    //Problem6
+   //Problem6
     int ab;
     cin >> ab;
 
@@ -57,6 +57,51 @@ cout << endl;
 
         cout << fixed << setprecision(4);
         cout << "Your total GPA is " << gpa << endl;
+
+    //Problem7
+    int pnumber;
+    cin >> pnumber;
+    int counter = 0;
+   for (int i = 2; i < pnumber; i++) {
+       if (!pnumber%i==0) counter++;
+   }
+    cout << ((counter >= 1) ? "Not prime" : "Prime");
+  cout << endl;
+
+    //Problem8
+    int revnum;
+    cin >> revnum;
+    int revers=0;
+    while (revnum>0) {
+        int digit =revnum%10;
+        revers = revers*10+digit;
+        revnum = revnum/10;
+    }
+    cout << revers << endl;
+
+    //Problem9
+    int sos;
+    cin >> sos;
+    for (int i=1; i<=sos; i++) {
+        cout << i << "*" << i << "=" << i*i << endl;
+    }
+
+    //Problem10
+    int num;
+    int Maxnum;
+    cin >> num;
+    Maxnum = num;
+    while (num != 0) {
+        if (num > Maxnum) {
+            Maxnum = num;
+        }
+    cin >> num;
+    }
+    cout << "Max is " << Maxnum << endl;
+
+
+
+
 
     return 0;
 }
